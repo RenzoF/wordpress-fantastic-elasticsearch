@@ -3,6 +3,8 @@ namespace elasticsearch;
 
 class Taxonomy extends AbstractArchive{
 	function facets($wp_query, $args){
+		//Disable taxonomy as it breaks ordering on woocommerce product categories pages
+		return;
 		if(!is_tax()){
 			return;
 		}
